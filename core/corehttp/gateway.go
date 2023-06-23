@@ -156,7 +156,7 @@ func (o *offlineGatewayErrWrapper) ResolvePath(ctx context.Context, path gateway
 	return md, err
 }
 
-func (o *offlineGatewayErrWrapper) GetCAR(ctx context.Context, path gateway.ImmutablePath, params gateway.CarParams) (gateway.ContentPathMetadata, io.ReadCloser, error) {
+func (o *offlineGatewayErrWrapper) GetCAR(ctx context.Context, path gateway.ImmutablePath, params *gateway.CarParams) (gateway.ContentPathMetadata, io.ReadCloser, error) {
 	md, data, err := o.gwimpl.GetCAR(ctx, path, params)
 	err = offlineErrWrap(err)
 	return md, data, err
