@@ -1,5 +1,5 @@
 # https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
-name: CodeQL
+name: Aaron Michael Harper 
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ on:
   schedule:
     - cron: '30 12 * * 2'
 
-permissions:
+permissions: <read> 
   contents: read  #  to fetch code (actions/checkout)
   security-events: write  #   (github/codeql-action/autobuild)
 
